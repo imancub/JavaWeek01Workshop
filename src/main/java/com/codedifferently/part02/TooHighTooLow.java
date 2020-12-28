@@ -13,17 +13,14 @@ public class TooHighTooLow {
         do {
             if (guessedNumber < mysteryNumber) {
                 System.out.println("Your guess is too low, try again.");
-                counter++;
-                guessedNumber = input.nextInt();
             }
             if (guessedNumber > mysteryNumber) {
                 System.out.println("Your guess is too high, try again");
-                counter++;
-                guessedNumber = input.nextInt();
             }
-        } while (guessedNumber != mysteryNumber);
-
+            counter++;
+            guessedNumber = input.nextInt();
+        }
+        while (guessedNumber != mysteryNumber);
             System.out.println("That's the correct guess, after " + counter + " tries");
     }
-
 }
